@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4vnsyama0cmc"]
+
+[ext_resource type="Script" path="res://assets/maps/cube.cs" id="1_g0heg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o4skt"]
+albedo_color = Color(0.274302, 0.753115, 0.62516, 1)
+metallic = 0.23
+
+[sub_resource type="BoxMesh" id="BoxMesh_us813"]
+material = SubResource("StandardMaterial3D_o4skt")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="cube" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_us813")
+script = ExtResource("1_g0heg")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, -0.143955, 1.30525, 3.62226)
