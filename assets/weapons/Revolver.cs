@@ -11,7 +11,7 @@ public partial class Revolver : Node3D
 	private AudioStreamPlayer reloadSound;
 	private AudioStreamPlayer noAmmoSound;
 	private AnimationPlayer animationPlayer;
-	private Node3D rayHolder;
+	private RayCast3D rayCast;
 
 	public override void _Ready()
 	{
@@ -19,7 +19,7 @@ public partial class Revolver : Node3D
 		reloadSound = GetNode<AudioStreamPlayer>("ReloadSound");
 		noAmmoSound = GetNode<AudioStreamPlayer>("NoAmmoSound");
 		animationPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
-		rayHolder = GetNode<Node3D>("RayHolder");
+		rayCast = GetNode<Node3D>("RayHolder").GetChild<RayCast3D>(0);
 	}
 
 	public override void _Process(double delta)
@@ -41,6 +41,12 @@ public partial class Revolver : Node3D
 			animationPlayer.Stop();
 			animationPlayer.Play("Shoot");
 			fireTimer = 1 / fireRate;
+
+			if (rayCast.IsColliding())
+			{
+				GD.Print("Hit: " + rayCast.GetCollider());
+				//
+			}
 		}
 		else
 		{
