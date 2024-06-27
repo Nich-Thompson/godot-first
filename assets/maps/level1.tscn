@@ -120,3 +120,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.9042, 0, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_nlph6")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 0.890626, 0.454737, 0, -0.454737, 0.890626, -9.6752, 5.8519, 17.9929)
+light_color = Color(0.78, 0.66417, 0.5694, 1)
