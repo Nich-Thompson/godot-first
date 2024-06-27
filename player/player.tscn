@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://player/Player.cs" id="1_2j7ds"]
 [ext_resource type="Script" path="res://player/CameraHolder.cs" id="2_tot5p"]
-[ext_resource type="PackedScene" uid="uid://dr05yfbfm46kk" path="res://assets/revolver.glb" id="3_tng7x"]
+[ext_resource type="PackedScene" uid="uid://cm1n6m2u18v7i" path="res://assets/weapons/revolver.tscn" id="3_jpvlj"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rk2ty"]
 
@@ -20,7 +20,7 @@ script = ExtResource("2_tot5p")
 [node name="WeaponHolder" type="Node3D" parent="CameraHolder"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.57314, 0)
 
-[node name="revolver" parent="CameraHolder/WeaponHolder" instance=ExtResource("3_tng7x")]
-transform = Transform3D(-4.37114e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, -4.37114e-09, 0.647745, 1.14054, -0.92657)
+[node name="revolver" parent="CameraHolder/WeaponHolder" instance=ExtResource("3_jpvlj")]
+transform = Transform3D(-4.37114e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, -4.37114e-09, 0.48746, 1.18642, -0.790088)
 
 [node name="Camera3D" type="Camera3D" parent="CameraHolder"]
