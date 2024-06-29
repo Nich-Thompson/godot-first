@@ -82,4 +82,14 @@ public partial class NecoBall : CharacterBody3D
 			// MoveAndCollide(Velocity);
 		}
 	}
+
+	public void TakeDamage(int damage)
+	{
+		GD.Print("Take damage: ", damage);
+		// Health -= damage;
+		// if (Health <= 0)
+		// {
+		// 	QueueFree();
+		// }
+	}
 }

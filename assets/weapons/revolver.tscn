@@ -414,3 +414,4 @@ transform = Transform3D(1, 0, -2.84217e-14, 0, 1, 0, 2.84217e-14, 0, 1, -0.78491
 
 [node name="RayCast3D" type="RayCast3D" parent="RayHolder"]
 target_position = Vector3(-200, 0, 0)
+collide_with_areas = true

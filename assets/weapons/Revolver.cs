@@ -44,8 +44,22 @@ public partial class Revolver : Node3D
 
 			if (rayCast.IsColliding())
 			{
-				GD.Print("Hit: " + rayCast.GetCollider());
-				//
+				// GD.Print("Hit: " + rayCast.GetCollider());
+				var area = rayCast.GetCollider() as Area3D;
+				if (area == null)
+					return;
+
+				GD.Print("ball");
+				if (area.IsInGroup("enemy"))
+				{
+					GD.Print("Hit enemy");
+					// charBody.TakeDamage(10);
+				}
+				if (area.IsInGroup("crit"))
+				{
+					GD.Print("Hit crit");
+					// charBody.TakeDamage(20);
+				}
 			}
 		}
 		else
